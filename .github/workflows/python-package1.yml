@@ -39,7 +39,7 @@ jobs:
       run: |
         pytest
 
-sq:
+jobs:
   build:
     name: Build and analyze
     runs-on: ubuntu-latest
