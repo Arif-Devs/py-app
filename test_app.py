@@ -10,7 +10,7 @@ def app():
 @pytest.fixture
 def client(app):
     return app.test_client()
-def a=0
+
 
 def test_home(client):
     response = client.get('/')
