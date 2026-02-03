@@ -11,7 +11,6 @@ def app():
 def client(app):
     return app.test_client()
 
-
 def test_home(client):
     response = client.get('/')
     assert response.status_code == 200
