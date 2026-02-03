@@ -12,9 +12,10 @@ COPY . /app
 # Install dependencies as root user first (this step needs root permissions)
 RUN groupadd -r appuser && \
     useradd -r -g appuser appuser && \
-    pip install -r requirements.txt && \ 
+  #  pip install -r requirements.txt && \ 
     chown -R appuser:appuser /app
 
+RUN  pip install -r requirements.txt && 
 # Expose port 80
 EXPOSE 80
 
