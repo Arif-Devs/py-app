@@ -54,8 +54,8 @@ jobs:
           name: coverage-report
       - name: "check coverage report file"
         run: |
-        ls -l
-        cat coverage.xml
+          ls -l
+          cat coverage.xml
        
       - uses: SonarSource/sonarqube-scan-action@v6
         env:
