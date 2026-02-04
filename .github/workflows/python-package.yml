@@ -48,6 +48,15 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: Download the coverage report artifact
+      - uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+      - name: "check coverage report file"
+        run: |
+        ls -l
+        cat coverage.xml
+       
       - uses: SonarSource/sonarqube-scan-action@v6
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
