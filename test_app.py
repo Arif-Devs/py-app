@@ -15,10 +15,5 @@ def client(app):
 def test_home(client):
     response = client.get('/')
     assert response.status_code == 200
-<<<<<<< HEAD
     expected_text = 'Sudhanshu'
-=======
-    expected_text = 'juwaira faiza'
-    expected_text = 'Faiza'
->>>>>>> 52fe92828cd7d6ef2a23565659465c739ec8b743
     assert expected_text.encode() in response.data
