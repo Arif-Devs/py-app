@@ -6,9 +6,9 @@ pipeline {
     stages {
         stage('Deployment'){
             steps{
-                sh 'docker pull jinny1/gfgdevops30'
+                sh 'docker pull arif164/pyappimage'
                 sh 'docker rm -f webos1'
-                sh 'docker run -dit --name webos1 -p 80:80 jinny1/gfgdevops30'
+                sh 'docker run -dit --name webos1 -p 80:80 arif164/pyappimage'
             }
         }
     }
